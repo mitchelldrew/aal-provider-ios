@@ -3,12 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		178929EA60CFD6061CAB0974 /* Pods_provider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EC4E616BBC6EA4B10E6D5F /* Pods_provider.framework */; };
 		4B0D749F262623B000163095 /* provider.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B0D749D262623B000163095 /* provider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B0D74AD26262B0800163095 /* PlacesRestaurantProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74AC26262B0800163095 /* PlacesRestaurantProvider.swift */; };
+		4B0D74B026262B1D00163095 /* presenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0D74AF26262B1D00163095 /* presenter.framework */; platformFilter = ios; };
+		4B0D74B326262B6300163095 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74B226262B6300163095 /* Extension.swift */; };
+		4B0D74B626262BB100163095 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74B526262BB100163095 /* Typealias.swift */; };
+		4B0D74B92626355400163095 /* FavProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74B82626355400163095 /* FavProvider.swift */; };
+		4B0D74BC2626359100163095 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74BB2626359100163095 /* ImageProvider.swift */; };
+		4B0D74E126263EBD00163095 /* IMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74E026263EBD00163095 /* IMapper.swift */; };
+		4B0D74E426263EDF00163095 /* IDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74E326263EDF00163095 /* IDataMapper.swift */; };
+		4B0D74E726263EF400163095 /* PlacesRestaurantMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74E626263EF400163095 /* PlacesRestaurantMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +25,15 @@
 		4B0D749A262623B000163095 /* provider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = provider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0D749D262623B000163095 /* provider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = provider.h; sourceTree = "<group>"; };
 		4B0D749E262623B000163095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B0D74AC26262B0800163095 /* PlacesRestaurantProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRestaurantProvider.swift; sourceTree = "<group>"; };
+		4B0D74AF26262B1D00163095 /* presenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = presenter.framework; sourceTree = "<group>"; };
+		4B0D74B226262B6300163095 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		4B0D74B526262BB100163095 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		4B0D74B82626355400163095 /* FavProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavProvider.swift; sourceTree = "<group>"; };
+		4B0D74BB2626359100163095 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		4B0D74E026263EBD00163095 /* IMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMapper.swift; sourceTree = "<group>"; };
+		4B0D74E326263EDF00163095 /* IDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDataMapper.swift; sourceTree = "<group>"; };
+		4B0D74E626263EF400163095 /* PlacesRestaurantMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRestaurantMapper.swift; sourceTree = "<group>"; };
 		76EC4E616BBC6EA4B10E6D5F /* Pods_provider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_provider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC85D11E585EBD197899B58 /* Pods-provider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-provider.release.xcconfig"; path = "Target Support Files/Pods-provider/Pods-provider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -26,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				178929EA60CFD6061CAB0974 /* Pods_provider.framework in Frameworks */,
+				4B0D74B026262B1D00163095 /* presenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,10 +72,26 @@
 		4B0D749C262623B000163095 /* provider */ = {
 			isa = PBXGroup;
 			children = (
+				4B0D74DF26263EB400163095 /* mapper */,
 				4B0D749D262623B000163095 /* provider.h */,
 				4B0D749E262623B000163095 /* Info.plist */,
+				4B0D74AC26262B0800163095 /* PlacesRestaurantProvider.swift */,
+				4B0D74B226262B6300163095 /* Extension.swift */,
+				4B0D74B526262BB100163095 /* Typealias.swift */,
+				4B0D74B82626355400163095 /* FavProvider.swift */,
+				4B0D74BB2626359100163095 /* ImageProvider.swift */,
 			);
 			path = provider;
+			sourceTree = "<group>";
+		};
+		4B0D74DF26263EB400163095 /* mapper */ = {
+			isa = PBXGroup;
+			children = (
+				4B0D74E026263EBD00163095 /* IMapper.swift */,
+				4B0D74E326263EDF00163095 /* IDataMapper.swift */,
+				4B0D74E626263EF400163095 /* PlacesRestaurantMapper.swift */,
+			);
+			path = mapper;
 			sourceTree = "<group>";
 		};
 		723612D01B7BAB48EE1877C7 /* Pods */ = {
@@ -65,13 +100,13 @@
 				30D233F1EBD5A5B353213391 /* Pods-provider.debug.xcconfig */,
 				9FC85D11E585EBD197899B58 /* Pods-provider.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		B1C041D8F15D432BAF968374 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B0D74AF26262B1D00163095 /* presenter.framework */,
 				76EC4E616BBC6EA4B10E6D5F /* Pods_provider.framework */,
 			);
 			name = Frameworks;
@@ -120,6 +155,7 @@
 				TargetAttributes = {
 					4B0D7499262623B000163095 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -181,6 +217,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0D74E126263EBD00163095 /* IMapper.swift in Sources */,
+				4B0D74BC2626359100163095 /* ImageProvider.swift in Sources */,
+				4B0D74E426263EDF00163095 /* IDataMapper.swift in Sources */,
+				4B0D74B92626355400163095 /* FavProvider.swift in Sources */,
+				4B0D74AD26262B0800163095 /* PlacesRestaurantProvider.swift in Sources */,
+				4B0D74B626262BB100163095 /* Typealias.swift in Sources */,
+				4B0D74B326262B6300163095 /* Extension.swift in Sources */,
+				4B0D74E726263EF400163095 /* PlacesRestaurantMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,12 +357,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 30D233F1EBD5A5B353213391 /* Pods-provider.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y82V9MDMPA;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = provider/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -329,6 +378,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aal.provider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,12 +388,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9FC85D11E585EBD197899B58 /* Pods-provider.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y82V9MDMPA;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = provider/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
