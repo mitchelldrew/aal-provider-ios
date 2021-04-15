@@ -27,12 +27,6 @@ extension KotlinException {
     }
 }
 
-extension Double {
-    func toKotlinDouble() -> KotlinDouble {
-        return KotlinDouble(double: self)
-    }
-}
-
 public protocol IUserDefaults {
     func set(_:Any?, forKey:String)
     func object(forKey:String) -> Any?

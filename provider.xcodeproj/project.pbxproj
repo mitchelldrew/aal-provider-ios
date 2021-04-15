@@ -14,7 +14,7 @@
 		4B0D74B326262B6300163095 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74B226262B6300163095 /* Extension.swift */; };
 		4B0D74B626262BB100163095 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74B526262BB100163095 /* Typealias.swift */; };
 		4B0D74B92626355400163095 /* FavProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74B82626355400163095 /* FavProvider.swift */; };
-		4B0D74BC2626359100163095 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74BB2626359100163095 /* ImageProvider.swift */; };
+		4B0D74BC2626359100163095 /* PlacesImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74BB2626359100163095 /* PlacesImageProvider.swift */; };
 		4B0D74E126263EBD00163095 /* IMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74E026263EBD00163095 /* IMapper.swift */; };
 		4B0D74E426263EDF00163095 /* IDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74E326263EDF00163095 /* IDataMapper.swift */; };
 		4B0D74E726263EF400163095 /* PlacesRestaurantMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0D74E626263EF400163095 /* PlacesRestaurantMapper.swift */; };
@@ -30,7 +30,7 @@
 		4B0D74B226262B6300163095 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4B0D74B526262BB100163095 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		4B0D74B82626355400163095 /* FavProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavProvider.swift; sourceTree = "<group>"; };
-		4B0D74BB2626359100163095 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		4B0D74BB2626359100163095 /* PlacesImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesImageProvider.swift; sourceTree = "<group>"; };
 		4B0D74E026263EBD00163095 /* IMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMapper.swift; sourceTree = "<group>"; };
 		4B0D74E326263EDF00163095 /* IDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDataMapper.swift; sourceTree = "<group>"; };
 		4B0D74E626263EF400163095 /* PlacesRestaurantMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRestaurantMapper.swift; sourceTree = "<group>"; };
@@ -72,14 +72,12 @@
 		4B0D749C262623B000163095 /* provider */ = {
 			isa = PBXGroup;
 			children = (
+				4BC1AFFC26267B6C0080035F /* provider */,
 				4B0D74DF26263EB400163095 /* mapper */,
 				4B0D749D262623B000163095 /* provider.h */,
 				4B0D749E262623B000163095 /* Info.plist */,
-				4B0D74AC26262B0800163095 /* PlacesRestaurantProvider.swift */,
 				4B0D74B226262B6300163095 /* Extension.swift */,
 				4B0D74B526262BB100163095 /* Typealias.swift */,
-				4B0D74B82626355400163095 /* FavProvider.swift */,
-				4B0D74BB2626359100163095 /* ImageProvider.swift */,
 			);
 			path = provider;
 			sourceTree = "<group>";
@@ -92,6 +90,16 @@
 				4B0D74E626263EF400163095 /* PlacesRestaurantMapper.swift */,
 			);
 			path = mapper;
+			sourceTree = "<group>";
+		};
+		4BC1AFFC26267B6C0080035F /* provider */ = {
+			isa = PBXGroup;
+			children = (
+				4B0D74B82626355400163095 /* FavProvider.swift */,
+				4B0D74BB2626359100163095 /* PlacesImageProvider.swift */,
+				4B0D74AC26262B0800163095 /* PlacesRestaurantProvider.swift */,
+			);
+			path = provider;
 			sourceTree = "<group>";
 		};
 		723612D01B7BAB48EE1877C7 /* Pods */ = {
@@ -218,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B0D74E126263EBD00163095 /* IMapper.swift in Sources */,
-				4B0D74BC2626359100163095 /* ImageProvider.swift in Sources */,
+				4B0D74BC2626359100163095 /* PlacesImageProvider.swift in Sources */,
 				4B0D74E426263EDF00163095 /* IDataMapper.swift in Sources */,
 				4B0D74B92626355400163095 /* FavProvider.swift in Sources */,
 				4B0D74AD26262B0800163095 /* PlacesRestaurantProvider.swift in Sources */,

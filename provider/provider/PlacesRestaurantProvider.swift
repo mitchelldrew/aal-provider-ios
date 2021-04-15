@@ -63,7 +63,9 @@ public class PlacesRestaurantProvider: IRestaurantProvider {
     }
     
     public func search(query: String) {
-        
+        let formatted = query.replacingOccurrences(of: " ", with: "+")
+        let url = URL(string: "https://maps.googleapis.com/maps/api/place/textsearch/json?query=\(formatted)&key=\(apiKey)")!
+        restManager.dataTask(with: URLRequest(url: url), completionHandler: getRestClosure()).resume()
     }
     
     
