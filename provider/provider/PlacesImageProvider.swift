@@ -52,7 +52,7 @@ open class PlacesImageProvider: IImageProvider {
     }
     
     public func get(imgRef: String) {
-        let url = URL(string:"https://maps.googleapis.com/maps/api/place/photo?maxwidth=75&maxheight=75&photoreference=\(imgRef)&key=\(apiKey)")!
+        let url = URL(string:"https://maps.googleapis.com/maps/api/place/photo?maxwidth=100&maxheight=100&photoreference=\(imgRef)&key=\(apiKey)")!
         restManager.dataTask(with: URLRequest(url: url), completionHandler: getRestClosure(imgRef:imgRef)).resume()
     }
     
